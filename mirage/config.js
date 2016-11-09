@@ -6,4 +6,7 @@ export default function() {
 
   this.get('/locations');
   this.get('/locations/:id');
+
+  this.get('/sites');
+  this.get('/sites/:id');
 }

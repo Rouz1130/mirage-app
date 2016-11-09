@@ -1,0 +1,20 @@
+<div class=container>
+  <h1>Site Test Page</h1>
+
+  <ul>
+    <li><strong>Length of Site List: </strong>{{model.sites.data.length}}</li>
+    <br>
+    <li><strong>List of Sites:</strong></li>
+    <ul>
+      <br>
+      {{#each model.sites.data as |site| }}
+        {{site-tile site=site}}
+        <br>
+      {{/each}}
+    </ul>
+  </ul>
+
+  <h1>Specific Number Check: {{model.sites.data.4.attributes.site-name}}</h1>
+</div>
+
+{{outlet}}
