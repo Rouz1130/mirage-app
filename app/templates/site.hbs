@@ -1,0 +1,28 @@
+<div class=container>
+  <h1>Site Test Page</h1>
+
+  <ul>
+    <li><strong>Length of Site List: </strong>{{model.sites.data.length}}</li>
+    <br>
+    <li><strong>List of Sites:</strong></li>
+    <ul>
+      <br>
+      {{#each model.sites.data as |site| }}
+      <li><strong>Name:</strong> {{site.attributes.site-name}}</li>
+      <li><strong>Account:</strong> {{site.attributes.account}}</li>
+      <li><strong>Time Zone:</strong> {{site.attributes.time-zone}}</li>
+      <li><strong>Max Charge:</strong> {{site.attributes.max-charge}}</li>
+      <li><strong>Site ID:</strong> {{site.attributes.site-id}}</li>
+      <li><strong>Billing Terms</strong></li>
+        <ul>
+          <li>{{site.attributes.billing-terms}}</li>
+        </ul>
+      <li><strong>Billing Address:</strong> {{site.attributes.billin-address}}</li>
+      <li><strong>Shipping Address:</strong> {{site.attributes.shipping-address}}</li>
+      <br>
+      {{/each}}
+    </ul>
+  </ul>
+</div>
+
+{{outlet}}
