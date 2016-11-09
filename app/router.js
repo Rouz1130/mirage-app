@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('accounts', { path: '/accounts/:account_id'});
+  this.route('location');
 });
 
 export default Router;
