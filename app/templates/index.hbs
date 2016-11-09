@@ -1,8 +1,23 @@
 <div class=container>
-  <h1>Test</h1>
-</div>
+  <h1>Index</h1>
 
-<ul>
-  <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
-  <li><strong>Name of Second Entry from Mirage List:</strong> {{model.account2.data.attributes.name}}</li>
-</ul>
+  <ul>
+    <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
+
+    <br>
+
+    <li><strong>Company Name and Id:</strong> {{model.account2.data.attributes.name}}</li>
+    <li><strong>Contact:</strong> {{model.account2.data.attributes.contact}}</li>
+    <li><strong>e-mail: </strong>{{model.account2.data.attributes.email}}</li>
+
+    <br>
+
+    <li><strong>Faker Looping</strong></li>
+    <ul>
+      {{#each model.accounts.data as |account| }}
+        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
+      {{/each}}
+    </ul>
+  </ul>
+
+</div>

@@ -3,4 +3,7 @@ export default function() {
 
   this.get('/accounts');
   this.get('/accounts/:id');
+
+  this.get('/sites');
+  this.get('/sites/:id');
 }
