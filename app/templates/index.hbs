@@ -10,14 +10,17 @@
     <li><strong>Contact:</strong> {{model.account2.data.attributes.contact}}</li>
     <li><strong>e-mail: </strong>{{model.account2.data.attributes.email}}</li>
 
+
+
     <br>
 
     <li><strong>Faker Looping</strong></li>
     <ul>
       {{#each model.accounts.data as |account| }}
-        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
+        <li>{{account.attributes.name}}</li>
       {{/each}}
     </ul>
   </ul>
+{{#link-to 'location'}}Location page{{/link-to}}
 
 </div>

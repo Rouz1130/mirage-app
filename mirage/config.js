@@ -4,6 +4,9 @@ export default function() {
   this.get('/accounts');
   this.get('/accounts/:id');
 
+  this.get('/locations');
+  this.get('/locations/:id');
+
   this.get('/sites');
   this.get('/sites/:id');
 }
