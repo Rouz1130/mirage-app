@@ -8,21 +8,13 @@
     <ul>
       <br>
       {{#each model.sites.data as |site| }}
-      <li><strong>Name:</strong> {{site.attributes.site-name}}</li>
-      <li><strong>Account:</strong> {{site.attributes.account}}</li>
-      <li><strong>Time Zone:</strong> {{site.attributes.time-zone}}</li>
-      <li><strong>Max Charge:</strong> {{site.attributes.max-charge}}</li>
-      <li><strong>Site ID:</strong> {{site.attributes.site-id}}</li>
-      <li><strong>Billing Terms</strong></li>
-        <ul>
-          <li>{{site.attributes.billing-terms}}</li>
-        </ul>
-      <li><strong>Billing Address:</strong> {{site.attributes.billin-address}}</li>
-      <li><strong>Shipping Address:</strong> {{site.attributes.shipping-address}}</li>
-      <br>
+        {{site-tile site=site}}
+        <br>
       {{/each}}
     </ul>
   </ul>
+
+  <h1>Specific Number Check: {{model.sites.data.4.attributes.site-name}}</h1>
 </div>
 
 {{outlet}}

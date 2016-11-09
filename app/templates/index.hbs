@@ -1,7 +1,5 @@
 <div class=container>
-  <h1>Test</h1>
-
-  <p>Test: {{model.sites.data.length}}</p>
+  <h1>Index</h1>
 
   <ul>
     <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
@@ -17,7 +15,7 @@
     <li><strong>Faker Looping</strong></li>
     <ul>
       {{#each model.accounts.data as |account| }}
-        <li>{{account.attributes.name}}</li>
+        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
       {{/each}}
     </ul>
   </ul>
