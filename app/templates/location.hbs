@@ -1,14 +1,12 @@
 <div class=container>
   <h1>Location Test Page</h1>
 
-  <ul>
-    <li><strong>Length of Location List: </strong>{{model.location.data.length}}</li>
-    <br>
-    <li><strong>List of Locations:</strong></li>
+      <br>
+    <h3><strong>List of Locations:</strong></h3>
     <ul>
       <br>
-      {{#each model.location.data as |location| }}
-      <li>Belongs to:{{location.attributes.account}}</li>
+      {{#each model.locations.data as |location| }}
+      <li><strong>Account: </strong>{{location.attributes.account}}</li>
       <li><strong>Name:</strong> {{location.attributes.location-name}}</li>
       <li><strong>Asset#:</strong> {{location.attributes.asset}}</li>
       <li><strong>Route:</strong> {{location.attributes.route}}</li>
@@ -16,9 +14,11 @@
       <li><strong>Pricing:</strong> {{location.attributes.pricing}}</li>
       <li><strong>Tax:</strong> {{location.attributes.tax}}</li>
       <li><strong>Commission:</strong>{{location.attributes.com}}</li>
+      <br>
       {{/each}}
     </ul>
-  </ul>
+
+
   {{#link-to 'index'}}To Accounts{{/link-to}}
 </div>
 
