@@ -4,13 +4,16 @@
 
 <ul>
   <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
+  <br>
+  <li><strong>Name and Id Number:</strong> {{model.account2.data.attributes.name}}</li>
+  <li><strong>Contact:</strong> {{model.account2.data.attributes.contact}}</li>
+  <li><strong>Email: </strong>{{model.account2.data.attributes.email}}</li>
+  <br>
   <li><strong>Working on Looping</strong></li>
   <ul>
     <li>I bet it's not working yet</li>
     {{#each model as accounts}}
-      <li>{{model.accounts.data.attributes.contact}}</li>
+    <li>{{model.accounts.data.attributes.contact}}</li>
     {{/each}}
   </ul>
-  <li><strong>Name of Second Entry from Mirage List:</strong> {{model.account2.data.attributes.name}}</li>
-  <li><strong>Name of Second Contact Using Faker:</strong> {{model.account2.data.attributes.contact}}</li>
 </ul>
