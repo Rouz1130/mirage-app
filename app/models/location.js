@@ -1,9 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  account: DS.attr(),
+  account: DS.belongsTo('account', {async: true}),
   locationName: DS.attr(),
-  asset: DS.attr(),
+  asset: DS.hasMany('asset', {async: true}),
   route: DS.attr(),
   salesModel: DS.attr(),
   pricing: DS.attr(),

@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   trackingNumber: DS.attr(),
-  location: 'foreign-key',
+  location: DS.belongsTo('location', {async: true}),
   manufacturer: DS.attr(),
   controllerModel: DS.attr(),
   frameModel: DS.attr(),
