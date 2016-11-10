@@ -15,4 +15,7 @@ export default function() {
 
   this.get('/routes');
   this.get('/routes/:id');
+
+  this.get('/products');
+  this.get('/products/:id');
 }

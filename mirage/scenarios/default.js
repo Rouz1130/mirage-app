@@ -7,4 +7,5 @@ export default function(server) {
   server.createList('site', {account: account.id});
   server.createList('asset', 3);
   server.createList('route', 5);
+  server.createList('product', 8);
 }

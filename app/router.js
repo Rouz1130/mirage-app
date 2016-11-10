@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('site', {path: '/sites/:site_id' });
   this.route('asset');
   this.route('route');
+  this.route('product');
 });
 
 export default Router;
