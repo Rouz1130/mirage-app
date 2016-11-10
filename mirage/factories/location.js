@@ -7,7 +7,7 @@ export default Factory.extend({
   asset: 'Foreign-key',
   route() { return faker.random.number();},
   salesModel(){return faker.random.word();},
-  pricing() {return faker.random.number();},
-  tax() {return faker.random.number();},
-  com() {return faker.random.number();}
+  pricing() {return faker.commerce.price();},
+  tax() {return faker.commerce.price();},
+  com() {return faker.commerce.price();}
 });
