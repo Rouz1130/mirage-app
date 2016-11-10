@@ -9,4 +9,8 @@ export default function() {
 
   this.get('/sites');
   this.get('/sites/:id');
+
+  this.get('/assets');
+  this.get('/assets/:id');
+
 }
