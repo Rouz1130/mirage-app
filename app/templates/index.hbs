@@ -2,24 +2,13 @@
   <h1>Index</h1>
 
   <ul>
-    <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
-
-    <br>
-
-    <li><strong>Company Name and Id:</strong> {{model.account2.data.attributes.name}}</li>
-    <li><strong>Contact:</strong> {{model.account2.data.attributes.contact}}</li>
-    <li><strong>e-mail: </strong>{{model.account2.data.attributes.email}}</li>
-
-
-
-    <br>
-
-    <li><strong>Faker Looping</strong></li>
+    <li><strong>Accounts</strong></li>
     <ul>
       {{#each model.accounts.data as |account| }}
-        <li>{{account.attributes.name}}</li>
+        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
       {{/each}}
     </ul>
+    <li><strong>Total:</strong> {{model.accounts.data.length}}</li>
   </ul>
 {{#link-to 'location'}}Location page{{/link-to}}
 <br>
