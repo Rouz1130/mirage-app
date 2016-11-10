@@ -2,7 +2,16 @@ export default function() {
   this.namespace = 'api';
 
   this.get('/accounts');
-  this.get('/accounts/:id');
+  this.get('/accounts/:id', (schema, request) => {
+    return schema.account.find(request.params.id);
+  });
+
+  this.post('/accounts/:id/sites', (schema, request) => {
+    let account = schema.account.find(request.params.id);
+    let attrs = JSON.parse(request.requestBody);
+
+    return account.createBlogPost(attrs);
+  });
 
   this.get('/locations');
   this.get('/locations/:id');
