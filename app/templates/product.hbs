@@ -1,0 +1,29 @@
+<div class=container>
+  <h1>Product Test Page</h1>
+
+      <br>
+    <h3><strong>List of Products:</strong></h3>
+    <ul>
+      <br>
+      {{#each model.products.data as |product| }}
+      <li><strong>Manufacturer: </strong>{{product.attributes.manufacturer}}</li>
+      <li><strong>Brand:</strong> {{product.attributes.brand}}</li>
+      <li><strong>Product:</strong> {{product.attributes.product}}</li>
+      <li><strong>Size:</strong> {{product.attributes.size}}</li>
+      <li><strong>Group:</strong> {{product.attributes.group}}</li>
+      <li><strong>Price:</strong> {{product.attributes.price}}</li>
+      <li><strong>Cost:</strong> {{product.attributes.cost}}</li>
+      <li><strong>UPC:</strong>{{product.attributes.upc}}</li>
+      <li><strong>Image:</strong>{{product.attributes.image}}</li>
+      <li><strong>Nutrition:</strong>{{product.attributes.nutrition}}</li>
+      <li><strong>Calories:</strong>{{product.attributes.calories}}</li>
+      <li><strong>Dispense Size:</strong>{{product.attributes.dispense-size}}</li>
+      <br>
+      {{/each}}
+    </ul>
+
+
+  {{#link-to 'index'}}To Accounts{{/link-to}}
+</div>
+
+{{outlet}}
