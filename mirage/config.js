@@ -13,4 +13,6 @@ export default function() {
   this.get('/assets');
   this.get('/assets/:id');
 
+  this.get('/routes');
+  this.get('/routes/:id');
 }

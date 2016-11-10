@@ -1,0 +1,19 @@
+<div class=container>
+  <h1>Route Test Page</h1>
+      <br>
+    <h3><strong>List of Routes:</strong></h3>
+    <ul>
+      <br>
+      {{#each model.routes.data as |route| }}
+      <li><strong>Route Name:</strong> {{route.attributes.route-name}}</li>
+      <li><strong>Driver:</strong> {{route.attributes.driver}}</li>
+      <li><strong>Manager:</strong> {{route.attributes.manager}}</li>
+      <li><strong>Stops:</strong> {{route.attributes.stops}}</li>
+      <br>
+      {{/each}}
+    </ul>
+
+  {{#link-to 'index'}}To Accounts{{/link-to}}
+</div>
+
+{{outlet}}

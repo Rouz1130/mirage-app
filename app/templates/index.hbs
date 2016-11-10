@@ -1,17 +1,11 @@
 <div class=container>
   <h1>Index</h1>
-
   <ul>
     <li><strong>Length of Mirage Generated List:</strong> {{model.accounts.data.length}}</li>
-
     <br>
-
     <li><strong>Company Name and Id:</strong> {{model.account2.data.attributes.name}}</li>
     <li><strong>Contact:</strong> {{model.account2.data.attributes.contact}}</li>
     <li><strong>e-mail: </strong>{{model.account2.data.attributes.email}}</li>
-
-
-
     <br>
 
     <li><strong>Faker Looping</strong></li>
@@ -21,10 +15,12 @@
       {{/each}}
     </ul>
   </ul>
+
 {{#link-to 'location'}}Location page{{/link-to}}
 <br>
 {{#link-to 'site'}}Site page{{/link-to}}
 <br>
 {{#link-to 'asset'}}Asset Page{{/link-to}}
-
+<br>
+{{#link-to 'route'}}Route Page{{/link-to}}
 </div>

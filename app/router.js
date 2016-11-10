@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('site');
   // this.route('site', {path: '/sites/:site_id' });
   this.route('asset');
+  this.route('route');
 });
 
 export default Router;
