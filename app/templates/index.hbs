@@ -17,7 +17,7 @@
     <li><strong>Faker Looping</strong></li>
     <ul>
       {{#each model.accounts.data as |account| }}
-        <li>{{account.attributes.name}}</li>
+        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
       {{/each}}
     </ul>
   </ul>
