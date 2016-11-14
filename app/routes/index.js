@@ -8,7 +8,6 @@ export default Ember.Route.extend({
   model() {
     return RSVP.hash({
       accounts: $.getJSON('/api/accounts'),
-      
     });
-    }
+  }
 });

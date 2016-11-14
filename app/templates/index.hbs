@@ -1,8 +1,12 @@
 <div class=container>
+
   <h1>Accounts</h1>
+  <ul>
+    <li><strong>Accounts</strong></li>
     <ul>
       {{#each model.accounts.data as |account| }}
       {{#link-to 'site'}}<li>{{account.attributes.name}}</li>{{/link-to}}
       {{/each}}
     </ul>
+  </ul>
 </div>
