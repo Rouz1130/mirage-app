@@ -15,19 +15,9 @@
 
     <ul>
       {{#each model.accounts.data as |account| }}
-        {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
+      {{#link-to 'site' account.id}}<li>{{account.attributes.name}}</li>{{/link-to}}
       {{/each}}
     </ul>
     <li><strong>Total:</strong> {{model.accounts.data.length}}</li>
   </ul>
-
-{{#link-to 'location'}}Location page{{/link-to}}
-<br>
-{{#link-to 'site'}}Site page{{/link-to}}
-<br>
-{{#link-to 'asset'}}Asset Page{{/link-to}}
-<br>
-{{#link-to 'route'}}Route Page{{/link-to}}
-<br>
-{{#link-to 'product'}}Product Page{{/link-to}}
 </div>
