@@ -1,10 +1,40 @@
 <div class=container>
   <h1>All Sites</h1>
-  <ul>
-    <br>
-    {{#each model.sites.data as |site| }}
-      {{site-tile site=site}}
+  <table class="table table-condensed table-reponsive table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Account</th>
+        <th>Time Zone</th>
+        <th>Max Charge</th>
+        <th>Site ID</th>
+        <th>Billing Terms</th>
+        <th>Billing Address</th>
+        <th>Shipping Address</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model.sites.data as |site| }}
+        <tr>
+          <td>{{site.attributes.site-name}}</td>
+          <td>{{site.attributes.account}}</td>
+          <td>{{site.attributes.time-zone}}</td>
+          <td>{{site.attributes.max-charge}}</td>
+          <td>{{site.attributes.site-id}}</td>
+          <td>{{site.attributes.billing-terms}}</td>
+          <td>{{site.attributes.billing-address}}</td>
+          <td>{{site.attributes.shipping-address}}</td>
+          <td><span class="glyphicon glyphicon-trash"></span></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+    <!-- <ul>
       <br>
-    {{/each}}
-  </ul>
+      {{#each model.sites.data as |site| }}
+        {{site-tile site=site}}
+        <br>
+      {{/each}}
+    </ul> -->
 </div>
