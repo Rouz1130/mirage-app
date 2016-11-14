@@ -1,31 +1,10 @@
 <div class=container>
-  <h1>Site Test Page</h1>
-
+  <h1>All Sites</h1>
   <ul>
-    <li>TEST: {{model.sites.data.4.attributes.site-name}}</li>
-    <li>Test: Trying to get the id number from account to show here</li>
-  </ul>
-
-  <ul>
-    <li>working out the site-tile situation here:</li>
-    {{site-tile site=model.sites.data.5.id}}
-  </ul>
-
-  <ul>
-    <li><strong>Length of Site List: </strong>{{model.sites.data.length}}</li>
     <br>
-    <li><strong>List of Sites:</strong></li>
-    <ul>
+    {{#each model.sites.data as |site| }}
+      {{site-tile site=site}}
       <br>
-      {{#each model.sites.data as |site| }}
-        {{site-tile site=site}}
-        <br>
-      {{/each}}
-    </ul>
+    {{/each}}
   </ul>
-
-
-    {{#link-to 'index'}}To Accounts{{/link-to}}
 </div>
-
-{{outlet}}
