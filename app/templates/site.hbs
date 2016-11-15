@@ -1,10 +1,9 @@
-<div class=container>
+<div class="container-fluid">
   <h1>All Sites</h1>
-  <h2>Test: {{model.sites.data.length}}</h2>
   <table class="table table-condensed table-reponsive table-bordered table-hover">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Site Name</th>
         <th>Account</th>
         <th>Time Zone</th>
         <th>Max Charge</th>
@@ -18,17 +17,29 @@
     <tbody>
       {{#each model.sites.data as |site| }}
         <tr>
-          <td>{{site.attributes.site-name}}</td>
-          <td>{{site.attributes.account}}</td>
+          <td><strong>{{site.attributes.site-name}}</strong></td>
+          <td><strong>{{#link-to 'index'}}{{site.attributes.account}}{{/link-to}}</strong></td>
           <td>{{site.attributes.time-zone}}</td>
           <td>{{site.attributes.max-charge}}</td>
           <td>{{site.attributes.site-id}}</td>
           <td>{{site.attributes.billing-terms}}</td>
           <td>{{site.attributes.billing-address}}</td>
           <td>{{site.attributes.shipping-address}}</td>
-          <td><span class="glyphicon glyphicon-trash"></span></td>
+          <td><span class="glyphicon glyphicon-trash" {{action 'destroySite' site}}></span></td>
         </tr>
       {{/each}}
     </tbody>
   </table>
+
+  <button class="btn btn-xs btn-success" id="addSite" {{action "toggleModal"}}>Modal Test</button>
+
+  {{#if isShowingModal}}
+    {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
+      Well, Hello!
+      <br>
+      <button class="btn btn-xs btn-success" {{action "toggleModal"}}>Close</button>
+    {{/modal-dialog}}
+  {{/if}}
 </div>
+
+{{outlet}}

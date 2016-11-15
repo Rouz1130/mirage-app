@@ -9,5 +9,12 @@ export default Ember.Route.extend({
     return RSVP.hash({
       accounts: $.getJSON('/api/accounts'),
     });
+  },
+
+  actions: {
+    destroySite(site) {
+      site.destroyRecord();
+      this.transitionTo('index');
+    }
   }
 });

@@ -9,6 +9,11 @@ export default function() {
 
   this.get('/sites');
   this.get('/sites/:id');
+  // this.del('/sites/:id', function(db, request) {
+  //   var id = request.params.id;
+  //   db.sites.remove(id);
+  //   return {};
+  // });
 
   this.get('/assets');
   this.get('/assets/:id');
