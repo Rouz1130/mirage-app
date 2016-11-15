@@ -1,10 +1,31 @@
 @import "bootstrap";
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
 body {
   background-color: lightsteelblue;
 }
 
 #addSite {
   margin-bottom: 30px;
+}
+
+.modal-dropdown {
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.controls {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.control-label {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.modal-form {
+  background-color: lightsteelblue;
 }

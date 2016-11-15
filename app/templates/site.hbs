@@ -35,9 +35,7 @@
 
   {{#if isShowingModal}}
     {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
-      Well, Hello!
-      <br>
-      <button class="btn btn-xs btn-success" {{action "toggleModal"}}>Close</button>
+      {{site-modal-tile}}
     {{/modal-dialog}}
   {{/if}}
 </div>
